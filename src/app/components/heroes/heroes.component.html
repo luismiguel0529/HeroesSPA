@@ -1,0 +1,23 @@
+
+<h1 style="text-align:center"> Heroes <small>Marvel y DC </small> </h1>
+<hr>
+
+<div class="card-columns ">
+
+  <div class="card animated fadeIn text-white bg-dark" *ngFor = "let heroe of heroes let i = index">
+    <img class="card-img-top" [src]="heroe.img" [alt]="heroe.nombre"> <!--INterpolación hecha por Angular-->
+    <div class="card-body ">
+      <h5 class="card-title">{{ heroe.nombre }}</h5>
+      <p class="card-text">{{ heroe.bio }}</p>
+      <p class="card-text"><small class="text-muted">{{ heroe.aparicion }}</small></p>
+
+     <button (click)="verHeroe(i)" type="button" class="btn btn-outline-info my-2 my-sm-0 btn-block">Ver más...</button>
+
+     <!-- <a [routerLink]="['heroe',i]" class="btn btn-outline-dark my-2 my-sm-0 btn-block">
+        ver mas....
+      </a>-->
+    </div>
+  </div>
+
+  
+</div>

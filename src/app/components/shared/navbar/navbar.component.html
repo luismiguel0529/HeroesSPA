@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+  <a class="navbar-brand" [routerLink]="['home']">
+    <img src="/assets/img/descarga.png" width="30" height="30" alt="">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto ">
+      <li class="nav-item text-info" routerLinkActive = "active">  
+        <a class="nav-link text-info" [routerLink]="['home']">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item" routerLinkActive = "active">
+        <a class="nav-link text-info" [routerLink]="['heroes']">Heroes</a>
+      </li>
+      <li class="nav-item" routerLinkActive = "active">
+        <a class="nav-link text-info" [routerLink]="['about']">About</a>
+      </li>
+    
+      
+      
+    </ul>
+    <form class="form-inline my-2 my-lg-0" >
+      <input class="form-control mr-sm-2  btn-line-info"  type="text" placeholder="Search Heroe" (keyup.enter)="searchHeroe(searchtext.value)" #searchtext>
+      <button (click)="searchHeroe(searchtext.value)" class="btn btn-outline-info my-2 my-sm-0" type="button">Search</button>
+    </form>
+  </div>
+ 
+  
+</nav>
